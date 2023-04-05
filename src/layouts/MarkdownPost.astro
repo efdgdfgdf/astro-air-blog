@@ -15,6 +15,8 @@ const dateFormated = formatDate(pubDate);
   <head>
     <BaseHead title={`${title} - ${SITE_TITLE}`} description={description} image={frontmatter.cover.square} />
     <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css"/>
+    <!-- Meta 图标 (可选) -->
+    <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline-meta.css"/>
   </head>
   <body class:list={["page-article", { "theme-dark": frontmatter.theme === "dark" }]}>
     <Header />
@@ -67,13 +69,14 @@ const dateFormated = formatDate(pubDate);
         </article>
       </section>
     </main>
+    <div id="waline" style="margin: 0 auto;  max-width: 1000px;"></div>
     <Footer />
     <script is:inline>
       var script = document.createElement("script");
       script.src = "/static/js/initPost.js";
       document.head.appendChild(script);
     </script>
-    <div id="waline"></div>
+    
     <script type="module">
       import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
 
@@ -81,17 +84,24 @@ const dateFormated = formatDate(pubDate);
         el: '#waline',
         serverURL: 'https://waline.lindanpeng.eu.org',
 
+        dark: 'auto',
+        pageview: true, // 浏览量统计
+        comment: true, // 评论数统计
         // 设置 emoji 为微博与哔哩哔哩
         emoji: [
           '//unpkg.com/@waline/emojis@1.1.0/weibo',
           '//unpkg.com/@waline/emojis@1.1.0/bilibili',
+          'https://unpkg.com/@waline/emojis@1.1.0/bmoji',
+          'https://unpkg.com/@waline/emojis@1.1.0/qq',
         ],
         // 对文章的反应
         reaction: [
-          'https://unpkg.com/@waline/emojis@1.1.0/weibo/weibo_heart_eyes.png',
+          'https://unpkg.com/@waline/emojis/tieba/tieba_agree.png',
+          'https://unpkg.com/@waline/emojis/tieba/tieba_look_down.png',
+          'https://unpkg.com/@waline/emojis/tieba/tieba_sunglasses.png',
           'https://unpkg.com/@waline/emojis@1.1.0/weibo/weibo_dog_joy.png',
           'https://unpkg.com/@waline/emojis@1.1.0/weibo/weibo_dog_consider.png',
-          'https://unpkg.com/@waline/emojis@1.1.0/weibo/weibo_sob.png',
+          'https://unpkg.com/@waline/emojis/tieba/tieba_sleep.png',
         ],
       });
     </script>

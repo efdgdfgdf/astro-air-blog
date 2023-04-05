@@ -1,5 +1,5 @@
 ---
-import { SITE_TITLE, SITE_EMAIL } from "../consts";
+import { SITE_TITLE, SITE_EMAIL, SITE_HOME, SITE_PHONE } from "../consts";
 const { theme } = Astro.props;
 import { SITE_NAME } from "../consts";
 const date = new Date();
@@ -13,26 +13,30 @@ const year = date.getFullYear();
         <div class="foot-nav-items">
           <div class="item">
             <div class="logo">{SITE_TITLE}</div>
-            <div class="email">Email: {SITE_EMAIL}</div>
+            <div class="email">📬：{SITE_EMAIL}</div>
+            <div class="phone">☎️：{SITE_PHONE}</div>
+            <div class="home">🔭：<a href={SITE_HOME} target="_blank">关于我</a></div>
           </div>
 
           <div class="item products">
             <div class="item-title">作品</div>
             <a href="/" target="_blank">本站博客</a>
-            <a href="https://the.top" target="_blank">TOP Link</a> 
+            <a href="https://www.dp2002.top" target="_blank">我の主站</a> 
+            <a href="https://www.lindanpeng.eu.org/" target="_blank">工作分享</a> 
           </div>
 
           <div class="item community">
             <div class="item-title">社媒</div>
-            <a href="https://twitter.com/austinit" target="_blank">Twitter</a>
-            <a href="https://github.com/austin2035" target="_blank">Github</a>
-            <a href="https://t.me/austin2035" target="_blank">Telegram</a>
+            <!-- <a href="https://twitter.com/austinit" target="_blank">Twitter</a> <a href="https://t.me/austin2035" target="_blank">Telegram</a> -->
+            <a href="https://github.com/efdgdfgdf/" target="_blank">Github</a>
+            <a href="https://www.dp2002.top/wechatOA/" target="_blank">微信公众号</a>
           </div>
           
           <div class="item resources">
             <div class="item-title">友链</div>
             <a href="https://the.top" target="_blank">THE.TOP</a>
             <a href="https://yufengbiji.com" target="_blank">驭风笔记</a>
+            <a href="https://yiran.blog.evrane.com/" target="_blank">Yiran</a>
           </div>
 
         </div>
@@ -40,7 +44,10 @@ const year = date.getFullYear();
       <div class="bottom">
         <div class="copyright">
           &copy; {`${year} ${SITE_NAME}`} 
+          Powered by
           <a href="//github.com/austin2035/astro-air-blog">Astro-air-blog</a>
+          | Theme by 
+          <a href="https://astro.build/">Astro</a>
         </div>
       </div>
     </div>
