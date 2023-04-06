@@ -7394,6 +7394,13 @@ blockquote p {
 :root {
   --waline-border: none;
   --waline-box-shadow: 0 12px 40px rgb(134 151 168 / 25%);
+  --waline-theme-color: #34495e; /*主题色，提交按钮*/
+  --waline-active-color: #bababa; /*鼠标移到提交按钮上的颜色*/
+  --waline-badge-color: #34495e; /*博主徽章色*/
+  --waline-avatar-radius: 5px;  /*头像圆角*/
+  --waline-avatar-size: 6rem; /*头像大小*/
+  --waline-dark-grey: #34495e; /*ID颜色*/
+  --waline-text-color:#6a7988; /*评论字体颜色*/
 }
 
 @media (prefers-color-scheme: dark) {

@@ -17,6 +17,7 @@ const dateFormated = formatDate(pubDate);
     <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css"/>
     <!-- Meta 图标 (可选) -->
     <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline-meta.css"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
   </head>
   <body class:list={["page-article", { "theme-dark": frontmatter.theme === "dark" }]}>
     <Header />
@@ -74,6 +75,11 @@ const dateFormated = formatDate(pubDate);
     <script is:inline>
       var script = document.createElement("script");
       script.src = "/static/js/initPost.js";
+      document.head.appendChild(script);
+    </script>
+    <script is:inline>
+      var script = document.createElement("script");
+      script.src = "/static/js/highlight.min.js";
       document.head.appendChild(script);
     </script>
     
