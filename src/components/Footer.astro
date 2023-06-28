@@ -13,7 +13,7 @@ const year = date.getFullYear();
         <div class="foot-nav-items">
           <div class="item">
             <div class="logo">{SITE_TITLE}</div>
-            <div class="email">📬：{SITE_EMAIL}</div>
+            <div class="email">📬：<a href={ "mailto:" + SITE_EMAIL }>{SITE_EMAIL}</a></div>
             <div class="phone">☎️：{SITE_PHONE}</div>
             <div class="home">🔭：<a href={SITE_HOME} target="_blank">关于我</a></div>
           </div>
@@ -29,6 +29,7 @@ const year = date.getFullYear();
             <div class="item-title">社媒</div>
             <!-- <a href="https://twitter.com/austinit" target="_blank">Twitter</a> <a href="https://t.me/austin2035" target="_blank">Telegram</a> -->
             <a href="https://github.com/efdgdfgdf/" target="_blank">Github</a>
+            <a href="https://blog.csdn.net/weixin_51704442?type=blog" target="_blank">CSDN</a>
             <a href="https://www.dp2002.top/wechatOA/" target="_blank">微信公众号</a>
           </div>
           
@@ -44,9 +45,9 @@ const year = date.getFullYear();
       <div class="bottom">
         <div class="copyright">
           &copy; {`${year} ${SITE_NAME}`} 
-          | Powered by
+          &nbsp;| &nbsp;Powered by
           <a href="//github.com/austin2035/astro-air-blog">Astro-air-blog</a>
-          | Theme by 
+          &nbsp;| &nbsp;Theme by 
           <a href="https://astro.build/">Astro</a>
         </div>
       </div>
